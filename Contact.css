@@ -1,0 +1,207 @@
+* {  margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Lato sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #777;
+      padding: 30px;
+      text-align: center;
+      text-shadow: -9px 3px 17px grey;
+    }
+
+
+    .bucket1{
+      height: 95vh;
+      background-image: linear-gradient(to right bottom, rgba(0,206,209,0.6), rgba(0, 191, 255, 0.6)),url(bounce-house.jpg);
+      background-size: cover;
+      background-position: top;
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      position: relative;
+
+
+    }
+
+    .text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-transform: uppercase;
+
+    }
+
+    .text {
+      margin: 0;
+      width: 1030px;
+      height: 138px;
+    }
+
+    .forms {
+      font-size: 2rem;
+    }
+
+    .header {
+      display: block;
+      font-size: 3.75rem;
+      font-weight: 400;
+      letter-spacing: 35px;
+      animation-name: moveInleft;
+      animation-duration: 1s;
+    }
+
+    .head1 {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 17.4px;
+      animation-name: moveInright;
+      animation-duration: 1s;
+    }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00bcd4;
+    position: fixed;
+    top: 0;
+    width: 97%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-size: 2rem;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+    background-color: #e63870;
+    }
+
+    .footer{
+
+      background-image: linear-gradient(to right bottom, rgba(0,206,209,0.6), rgba(0, 191, 255, 0.6));
+      /*background-size: cover;
+      background-position: top;*/
+      position: relative;
+      padding: 40px 0 20px;
+      margin: 0;
+      height: auto;
+      width: auto;
+      margin-top: 100px;
+
+    }
+
+    .footer-link {color: #EAF6F6;
+      font-family: 'Dancing Script';
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 2rem;
+      text-shadow: -9px 3px 17px #000000;
+    }
+
+    .footer-link:hover{color: #b21f66;
+      font-family: 'Dancing Script';
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 2rem;
+      text-shadow: -9px 3px 17px #FFFFFF;
+    }
+
+
+
+  .btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+    transition: all .2s;
+    background-color: #00bcd4;
+    color: #2b580c;
+    font-size: 2rem;
+
+
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  }
+
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+
+  }
+
+
+  .btn::after { /* A button behind the parent button*/
+    content: "";
+    display: inline-block; /*display this button as an inline-block, same as parent button*/
+    height: 100%; /*set this button 100% of the height of the parent button*/
+    width: 100%; /*set this button 100% of the width of the parent button*/
+    border-radius: 100px; /*set this button 100% of the border-radius of the parent button*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #00bcd4
+  }
+
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6); /* make the child button scale up or bigger when hoovered over*/
+    opacity: 0; /* Gives the child botton the fading factor*/
+  }
+
+    @keyframes gradient {
+      0% {
+          background-position: 0 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0 50%;
+      }
+    }
+
+
+    @keyframes moveInleft {
+      0% {opacity: 0;
+          transform: translateX(-100%);}
+
+
+      100% {opacity: 1;
+            transform: translateX(0%);}
+
+    }
+
+    @keyframes moveInright {
+      0% {opacity: 0;
+          transform: translateX(100%);}
+
+
+      100% {opacity: 1;
+            transform: translateX(0%);}
+
+    }
